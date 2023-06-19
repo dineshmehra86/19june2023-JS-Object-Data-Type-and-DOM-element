@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Object Data Type and DOM element selection</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Object Data Type and DOM element selection</title>
+    </head>
+    <body>
+        <script>
+            // Object denoted with {}
+            // let create a javascript object
+            var student1 = {
+                fname:"Dinesh",
+                lname:"Kumar",
+                age:37,
+                address:"Delhi",
+                qualification: "B.COM",    
+                // 1. Property:value
+                // 1. Function Defination
+                getMyFullAddress() {
+                    console.log("Hello I am " + this.fname +' '+ this.lname +' '+this.age + ' years old');
+                }
+
+            }; // Student1 is a type of JS object
+
+            // var student2 = ""; // Student2 is a type of string
+            // const student3 = 37; // Student3 is a type of number
+            var student4 = {
+                fname:"Kartik",
+                lname:"Mehra",
+                age: 7,
+                address: "New Delhi",
+                getAddress(){
+                    // every function return something
+                    return this.address;
+                }
+            };
+            // How to access these information from JS object
+            // Object.Member
+                console.log(student1.fname); // . is a member selector operator
+                // 2. Function calling
+                console.log(student1.getMyFullAddress()); 
+                console.log(student4.fname);
+
+                console.log(student4.getAddress());
+                 
+        </script>
+    </body>
 </html>
